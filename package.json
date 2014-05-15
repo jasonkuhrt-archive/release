@@ -1,0 +1,31 @@
+{
+  "name": "release",
+  "version": "0.0.1",
+  "description": "Rapidly release projects on the command line",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jasonkuhrt/release.git"
+  },
+  "keywords": [
+    "cli",
+    "release",
+    "semvar",
+    "version",
+    "iterate",
+    "automation",
+    "utility",
+    "deploy",
+    "productivity",
+    "share",
+    "community"
+  ],
+  "author": "Jason Kuhrt <jasonkuhrt@me.com> (http://jasonkuhrt.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jasonkuhrt/release/issues"
+  },
+  "homepage": "https://github.com/jasonkuhrt/release"
+}
