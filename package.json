@@ -4,10 +4,9 @@
   "description": "Rapidly release projects on the command line",
   "preferGlobal": true,
   "main": "bin/release.js",
-  "scripts": {
-  },
+  "scripts": {},
   "bin": {
-    "release": "bin/release"
+    "release": "bin/release.js"
   },
   "repository": {
     "type": "git",
