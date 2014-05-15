@@ -1,6 +1,6 @@
 {
   "name": "release_",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Rapidly release projects on the command line",
   "preferGlobal": true,
   "main": "bin/release.js",
