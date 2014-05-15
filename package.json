@@ -1,9 +1,12 @@
 {
-  "name": "release",
+  "name": "release_",
   "version": "0.0.1",
   "description": "Rapidly release projects on the command line",
-  "main": "index.js",
+  "main": "bin/release.js",
   "scripts": {
+  },
+  "bin": {
+    "release": "bin/release"
   },
   "repository": {
     "type": "git",
