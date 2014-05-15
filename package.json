@@ -15,7 +15,7 @@
   "keywords": [
     "cli",
     "release",
-    "semvar",
+    "semver",
     "version",
     "iterate",
     "automation",
