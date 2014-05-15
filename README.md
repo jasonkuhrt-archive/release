@@ -8,7 +8,7 @@ This project is being worked on. What follows is a spec.
 
 ## Installation
 
-    npm install release_
+    npm install --global release_
 
 ## Why
 
