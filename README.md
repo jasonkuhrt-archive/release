@@ -14,6 +14,7 @@ This project is being worked on. What follows is a spec.
 
 Humans should be able to confidently release project iterations using one familiar interface regardless of their version-control or packaging system of choice.
 
+While `release` is created upon the [nodejs](http://nodejs.org) platform its system-agnostic goals may be ported to a more neutral platform in the future (e.g. `shell scripts`). `node` was chosen because it is currently the author's most proficient environment but also because `node` has a vibrant full-stack community using multiple packaging systems, and a unix-like mentality of authoring many small focused modules; this is fertil soil to plant `release`.
 
 ## How
 
@@ -33,7 +34,7 @@ Humans should be able to confidently release project iterations using one famili
 
 Then `release` employs the respective drivers for each system bridging their disparate interfaces to `release`'s.
 
-While `release` is created upon the [nodejs](http://nodejs.org) platform its system-agnostic goals may be ported to a more neutral platform in the future (e.g. `shell scripts`). `node` was chosen because it is currently the author's most proficient environment but also because `node` has a vibrant full-stack community using multiple packaging systems, and a unix-like mentality of authoring many small focused modules; this is fertil soil to plant `release`.
+Defaults can be customized in `.release.(yml|json)` which will be searched for in `cwd`, then recursively until `/`. Config files closer to `cwd` override ones further away. CLI-flags will override config file defaults.
 
 ## What
 
