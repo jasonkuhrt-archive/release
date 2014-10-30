@@ -22,7 +22,7 @@ describe 'relesae lib update', ->
 
 
   it '.localVCS() commits and tags the release', ->
-    release =
+    release = I.fromJS
       version:'100.0.2'
       type: 'patch'
       initialManifest:

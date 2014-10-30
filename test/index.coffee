@@ -10,10 +10,10 @@ foobarfileContents = JSON.stringify(a:1, b:2)
 describe 'release lib messages', ->
 
   it '.commit() creates a spcial "initial" message for first release', ->
-    eq messages.commit({ version: '0.0.1', type: 'patch' }), 'Release initial 0.0.1'
+    eq messages.commit(I.Map version: '0.0.1', type: 'patch'), 'Release initial 0.0.1'
 
   it '.commit() creates a commit message for the release type', ->
-    eq messages.commit({ version: '0.0.2', type: 'patch' }), 'Release patch 0.0.2'
+    eq messages.commit(I.Map version: '0.0.2', type: 'patch'), 'Release patch 0.0.2'
 
 
 
