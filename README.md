@@ -10,23 +10,29 @@ Joyful lightening-fast project releases
 (`release` was already taken)
 
 
-## Features
-
-- Currently supports: Node projects being version-controlled by git
-
-#### Example:
+## Example
 
 ![deploy-screenshot](https://raw.githubusercontent.com/jasonkuhrt/release/gh-pages/deploy-screenshot.png)
 
+
+
+## Features
+- Currently supports: Node projects being version-controlled by git
+
+
+#### cli docs:
 ```sh
-About to make a patch release that will result in version: 0.1.7
-prompt: Confirm this release (y|yes):  y
+$ release -h
 
-✓ done: git commit
-✓ done: git push
-✓ done: npm publish
+  Usage: release [options]
 
-Version 0.1.7 successfully released!
+  Options:
+
+    -h, --help     output usage information
+    -V, --version  output the version number
+    -p, --patch    Make a patch release
+    -m, --minor    Make a minor release
+    -a, --major    Make a major release
 ```
 
 
