@@ -9,12 +9,13 @@
     "test-debug": "DEBUG=release* mocha --compilers coffee:coffee-script/register"
   },
   "dependencies": {
-    "immutable": "^3.0.1",
-    "semver": "^2.3.0",
+    "async": "^0.8.0",
     "bluebird": "^2.3.4",
-    "debug": "^2.1.0",
     "commander": "^2.2.0",
-    "async": "^0.8.0"
+    "debug": "^2.1.0",
+    "immutable": "^3.0.1",
+    "prompt": "^0.2.14",
+    "semver": "^2.3.0"
   },
   "repository": {
     "url": "git://github.com/jasonkuhrt/release.git",
