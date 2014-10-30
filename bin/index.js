@@ -22,7 +22,7 @@ cli
   .option('-m, --minor', 'Make a minor release')
   .option('-a, --major', 'Make a major release')
   // .option('-Y, --no-prompt', 'Disable confirmation prompt')
-  .option('-R, --no-registry', 'Disable registry publishing')
+  // .option('-R, --no-registry', 'Disable registry publishing')
 
 cli.parse(process.argv)
 
@@ -59,7 +59,9 @@ function doRelease(releaseType){
   .tap(function(releaseData){
     return update.manifest(releaseData)
     .then(update.localVCS.bind(null, releaseData))
+    .then(console.log.bind(null, 'done: vcs commit'))
     .then(update.remoteVCS)
+    .then(console.log.bind(null, 'done: vcs push'))
     .then(update.registry.bind(null, releaseData))
   })
 }
