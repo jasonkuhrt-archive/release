@@ -8,6 +8,7 @@ var chalk = require('chalk')
 var cli = require('commander')
 var get = require('../lib/get')
 var update = require('../lib/update')
+var utils = require('../lib/utils')
 
 var dataReleaseTypes = I.Set.of('patch', 'minor', 'major')
 
@@ -57,12 +58,14 @@ function doRelease(releaseType){
     })
   })
   .tap(function(releaseData){
+    console.log('')
     return update.manifest(releaseData)
     .tap(update.localVCS.bind(null, releaseData))
-    .tap(function(){ console.log('done: vcs commit') })
+    .tap(function(){ utils.logStepDone('git commit') })
     .tap(update.remoteVCS)
-    .tap(function(){ console.log('done: vcs push') })
+    .tap(function(){ utils.logStepDone('git push') })
     .tap(update.registry.bind(null, releaseData))
+    .tap(function(){ console.log('') })
   })
 }
 
