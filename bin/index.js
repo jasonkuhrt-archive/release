@@ -1,5 +1,7 @@
 var I = require('immutable')
 var cli = require('commander')
+var get = require('../lib/get')
+var update = require('../lib/update')
 
 var dataReleaseTypes = I.Set.of('patch', 'minor', 'major')
 
@@ -34,8 +36,8 @@ function doRelease(releaseType){
     return update.manifest(releaseData)
     .then(update.localVCS.bind(null, releaseData))
     .then(update.remoteVCS)
+    .then(update.registry.bind(null, releaseData))
   })
-  // .then(updateRegistry)
 }
 
 function findFirstKeyIntersect(set, obj){

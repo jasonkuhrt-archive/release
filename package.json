@@ -1,15 +1,16 @@
 {
-  "name": "release_",
+  "name": "release2",
   "version": "0.0.1",
   "description": "Rapidly release projects on the command line",
   "preferGlobal": true,
   "main": "bin/release.js",
   "scripts": {
     "test": "mocha --compilers coffee:coffee-script/register",
+    "test-debug": "DEBUG=release* mocha --compilers coffee:coffee-script/register",
     "dev": "mocha --compilers coffee:coffee-script/register --reporter spec --watch"
   },
   "bin": {
-    "release": "bin/release.js"
+    "release": "bin/index.js"
   },
   "repository": {
     "type": "git",
@@ -38,10 +39,13 @@
     "async": "^0.8.0",
     "bluebird": "^2.3.4",
     "commander": "^2.2.0",
+    "debug": "^2.1.0",
     "immutable": "^3.0.1",
     "semver": "^2.3.0"
   },
   "devDependencies": {
-    "mocha": "^1.20.0"
+    "chai": "^1.9.2",
+    "coffee-script": "^1.8.0",
+    "mocha": "^2.0.1"
   }
 }
