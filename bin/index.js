@@ -58,11 +58,11 @@ function doRelease(releaseType){
   })
   .tap(function(releaseData){
     return update.manifest(releaseData)
-    .then(update.localVCS.bind(null, releaseData))
-    .then(console.log.bind(null, 'done: vcs commit'))
-    .then(update.remoteVCS)
-    .then(console.log.bind(null, 'done: vcs push'))
-    .then(update.registry.bind(null, releaseData))
+    .tap(update.localVCS.bind(null, releaseData))
+    .tap(function(){ console.log('done: vcs commit') })
+    .tap(update.remoteVCS)
+    .then(function(){ console.log('done: vcs push') })
+    .tap(update.registry.bind(null, releaseData))
   })
 }
 
