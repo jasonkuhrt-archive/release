@@ -66,7 +66,7 @@ function doRelease(releaseType){
     })
     .tap(update.localVCS.bind(null, releaseData))
     .tap(function(didCommit){
-      if (didUpdate) utils.logStepDone('git commit + tag')
+      if (didCommit) utils.logStepDone('git commit + tag')
       else utils.logStepDone('git tag')
     })
     .tap(update.remoteVCS)
