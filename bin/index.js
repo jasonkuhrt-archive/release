@@ -60,8 +60,15 @@ function doRelease(releaseType){
   .tap(function(releaseData){
     console.log('')
     return update.manifest(releaseData)
+    .tap(function(didUpdate){
+      if (didUpdate) utils.logStepDone('manifest updated')
+      else utils.logStepSkipped('no manifest to update')
+    })
     .tap(update.localVCS.bind(null, releaseData))
-    .tap(function(){ utils.logStepDone('git commit') })
+    .tap(function(didCommit){
+      if (didUpdate) utils.logStepDone('git commit + tag')
+      else utils.logStepDone('git tag')
+    })
     .tap(update.remoteVCS)
     .tap(function(){ utils.logStepDone('git push') })
     .tap(update.registry.bind(null, releaseData))
