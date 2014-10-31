@@ -39,7 +39,7 @@
   "name": "release2",
   "homepage": "https://github.com/jasonkuhrt/release",
   "preferGlobal": true,
-  "version": "0.1.11",
+  "version": "0.1.12",
   "main": "bin/release.js",
   "description": "Rapidly release projects on the command line",
   "devDependencies": {
