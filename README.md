@@ -17,7 +17,11 @@ Joyful lightening-fast project releases
 
 
 ## Features
-- Currently supports: Node projects being version-controlled by git
+- supported project types:
+  - `node + npm`
+  - `duo` (and any other manifestless projects)
+- supported VCSs:
+  - `git`
 
 
 #### cli docs:
