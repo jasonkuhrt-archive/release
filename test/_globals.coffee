@@ -9,3 +9,6 @@ GLOBAL.eq = a.deepEqual
 GLOBAL.fs = require('../lib/utils').fs
 GLOBAL.cproc = require('../lib/utils').cproc
 GLOBAL.I = require('immutable')
+GLOBAL.List = GLOBAL.I.List
+GLOBAL.Map = GLOBAL.I.Map
+GLOBAL.Set = GLOBAL.I.Set
