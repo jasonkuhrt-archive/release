@@ -7,7 +7,7 @@ describe 'assemblyLine()', ->
   it 'accepts a line and a step, and adds the step to the line', ->
     unit = Map({ tags: Set.of('a'), action: -> })
     got = assemblyLine(List(), unit)
-    a I.is got, List([unit])
+    eq got.toJS(), [unit.toJS()]
 
 
 describe 'stepConfig', ->
