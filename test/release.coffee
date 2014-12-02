@@ -19,7 +19,7 @@ describe 'Release', ->
     eq release.sequence.size, 1
 
 
-  describe '.plan() runs the sequence\'s read-phase', ->
+  describe.skip '.plan() runs the sequence\'s read-phase', ->
     release = undefined
 
     beforeEach ->
