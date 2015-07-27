@@ -1,4 +1,4 @@
-# Depricated!
+# Deprecated!
 
 This project is no longer needed because of three reasons:
 
