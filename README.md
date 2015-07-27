@@ -1,3 +1,13 @@
+# Depricated!
+
+This project is no longer needed because of three reasons:
+
+1. Single release system for multiple platforms is too ambitious
+2. NPM now has https://docs.npmjs.com/cli/version
+3. I believe NPM is now the defacto package-manager for client-side and server-side so a parent tool to bridge different managers no longer matters.
+
+-----
+
 # release
 Joyful lightening-fast project releases
 
